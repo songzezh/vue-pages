@@ -60,6 +60,38 @@ npm run test:e2e -- --debug
 npm run lint
 ```
 
+### 项目结构
+
+项目根据 [Atomic Design](https://www.geeksforgeeks.org/websites-apps/atomic-design/) 的方法组织结构：
+
+```text
+/src
+|-- /components
+|   |-- /atoms
+|   |   |-- AtomButton.vue
+|   |   |-- AtomIcon.vue
+|   |-- /molecules
+|   |-- /organisms
+|   |-- /templates
+|-- /pages
+|   |-- PageHome.vue
+|   |-- PagePokemonDetail.vue
+|-- /utils
+|-- /layout
+|-- /plugins
+|-- /router
+|   |-- index.js
+|-- /store
+|   |-- index.js
+|-- /assets
+|   |-- /images
+|   |-- /styles
+|-- /tests
+|   |-- ...
+|-- App.vue
+|-- main.js
+```
+
 ## Recommended Browser Setup
 
 - Chromium-based browsers (Chrome, Edge, Brave, etc.):
