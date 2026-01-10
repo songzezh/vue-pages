@@ -9,6 +9,7 @@ A Web page project based on Vue.js 3.
 | 技术栈  | 版本 | 作用   |
 |------|---|------|
 | Vue.js | 3 | 开发框架 |
+| Quasar | 2.18.6 | UI 框架 |
 | Vue Router | | 路由机制 |
 
 ### 启动项目
