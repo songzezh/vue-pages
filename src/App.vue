@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>Web pages based on Vue.js.</h1>
+  <router-view></router-view>
 </template>
 
 <style scoped></style>
