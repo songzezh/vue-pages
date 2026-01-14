@@ -12,7 +12,7 @@ interface SubModule {
 
 interface Module {
   name: string
-  caption: string
+  label: string
   icon: string
   submodules: SubModule[]
 }
@@ -22,7 +22,7 @@ const leftDrawerOpen = ref<boolean>(false)
 const modules = ref<Module[]>([
   {
     name: 'book-manage',
-    caption: '图书管理',
+    label: '图书管理',
     icon: 'menu_book',
     submodules: [
       {
@@ -71,7 +71,7 @@ const modules = ref<Module[]>([
   },
   {
     name: 'music_manage',
-    caption: '影音管理',
+    label: '影音管理',
     icon: 'library_music',
     submodules: [
       {
@@ -114,7 +114,7 @@ const modules = ref<Module[]>([
   },
   {
     name: 'file_metadata_manage',
-    caption: '文件管理',
+    label: '文件管理',
     icon: 'file_present',
     submodules: [
       {
@@ -142,20 +142,38 @@ function toggleLeftDrawer(): void {
 
 <template>
   <!-- 页面整体布局格式 -->
-  <q-layout view="hHh lpR fFf" class="bg-grey-1">
+  <q-layout
+    view="hHh lpR fFf"
+    :class="$q.dark.isActive ? 'layout_dark' : 'layout_light'"
+  >
     <!-- 页面头部 -->
-    <q-header elevated class="bg-white text-grey-8" height-hint="64">
-      <q-toolbar class="GNL__toolbar">
+    <q-header
+      elevated
+      :class="$q.dark.isActive ? 'header_dark' : 'header_light'">
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          :icon="leftDrawerOpen ? 'menu_open': 'menu'"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
         <q-toolbar-title
-          v-if="$q.screen.gt.xs"
-          shrink
-          class="row items-center no-wrap text-weight-bold"
           @click="toggleLeftDrawer"
         >
           文件管理
         </q-toolbar-title>
 
         <q-space />
+        <!-- 主题切换  -->
+        <q-btn
+          class="q-mr-xs bg-grey-3 q-py-xs q-px-sm custom-border"
+          flat
+          @click="$q.dark.toggle()"
+          color="black"
+          :icon="$q.dark.isActive ? 'nights_stay' : 'wb_sunny'"
+        />
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn round flat>
@@ -173,19 +191,16 @@ function toggleLeftDrawer(): void {
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      class="bg-white"
-      :width="280"
     >
-      <q-scroll-area class="fit">
-        <q-list padding bordered class="text-grey-8">
+      <q-scroll-area class="fit" :class="$q.dark.isActive ? 'drawer_dark' : 'drawer_light'">
+        <q-list padding bordered>
           <template v-for="module in modules" :key="module.name">
             <!-- 有子模块的情况：使用 q-expansion-item -->
             <q-expansion-item
               v-if="module.submodules && module.submodules.length > 0"
               :icon="module.icon"
-              :caption="module.caption"
+              :label="module.label"
               expand-separator
-              header-class="text-weight-medium"
             >
               <!-- 添加缩进 -->
               <div class="q-pl-lg">
@@ -212,7 +227,6 @@ function toggleLeftDrawer(): void {
             <q-item
               v-else
               :key="module.name + '-item'"
-              class="GNL__drawer-item"
               clickable
               v-ripple
             >
@@ -220,7 +234,7 @@ function toggleLeftDrawer(): void {
                 <q-icon :name="module.icon"/>
               </q-item-section>
               <q-item-section>
-                {{ module.caption }}
+                {{ module.label }}
               </q-item-section>
             </q-item>
           </template>
@@ -236,5 +250,35 @@ function toggleLeftDrawer(): void {
 </template>
 
 <style scoped>
-/* 可以添加自定义样式 */
+
+.layout_light {
+  background: white;
+}
+
+.layout_dark {
+  background: linear-gradient(145deg, #2e3d57 15%, rgb(7, 18, 34) 70%);
+  color: white;
+}
+
+.drawer_light {
+  background: #2e3d57;
+  color: white;
+}
+
+.drawer_dark {
+  background: linear-gradient(145deg, #2e3d57 15%, rgb(7, 18, 34) 70%);
+  /* background: #2e3d57; */
+  color: white;
+}
+
+.header_light {
+  background: white;
+  color: teal;
+}
+
+.header_dark {
+  background: linear-gradient(145deg, #2e3d57 15%, rgb(7, 18, 34) 70%);
+  /* background: black; */
+}
+
 </style>
