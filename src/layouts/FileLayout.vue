@@ -41,7 +41,7 @@ const modules = ref<Module[]>([
         name: 'press_series_list',
         label: '丛书信息',
         icon: 'collections_bookmark',
-        to: '/file/press/serie',
+        to: '/file/press/series',
       },
       {
         name: 'reading_list',
