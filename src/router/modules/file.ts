@@ -11,6 +11,14 @@ const fileRoutes: RouteRecordRaw = {
     requiresAuth: false
   },
   children: [
+    {
+      path: '',
+      name: 'FileDashboard',
+      component: () => import('@/pages/FileManage/Dashboard.vue'),
+      meta: {
+        title: 'File Manage Dashboard'
+      }
+    }
   ]
 }
 
