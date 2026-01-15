@@ -1,6 +1,8 @@
 // src/router/modules/file.ts
 import type { RouteRecordRaw } from 'vue-router'
 
+import bookRoutes from './file/book'
+
 const fileRoutes: RouteRecordRaw = {
   path: '/file',
   name: 'FileModule',
@@ -18,7 +20,8 @@ const fileRoutes: RouteRecordRaw = {
       meta: {
         title: 'File Manage Dashboard'
       }
-    }
+    },
+    bookRoutes
   ]
 }
 
