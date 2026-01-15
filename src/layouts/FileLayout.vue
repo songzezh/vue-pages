@@ -53,7 +53,7 @@ const modules = ref<Module[]>([
         name: 'clc_code',
         label: '中图法分类',
         icon: 'class',
-        to: '/file/book/libCode'
+        to: '/file/book/libClass'
       },
       {
         name: 'subject',

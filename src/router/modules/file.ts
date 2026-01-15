@@ -21,7 +21,7 @@ const fileRoutes: RouteRecordRaw = {
         title: 'File Manage Dashboard'
       }
     },
-    bookRoutes
+    ...bookRoutes
   ]
 }
 
