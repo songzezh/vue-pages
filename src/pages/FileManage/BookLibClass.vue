@@ -281,7 +281,6 @@ onMounted(() => {
   <page-content class="q-pa-sm">
     <!-- 图书分类管理表格 -->
     <q-table
-      class="fit sticky-header-table"
       selection="multiple"
       v-model:selected="selectedRows"
       :dense="$q.screen.lt.md"
@@ -292,6 +291,8 @@ onMounted(() => {
       :filter="filter"
       :columns="columns"
       row-key="code"
+      style="height: 500px"
+      virtual-scroll
       v-model:pagination="pagination"
     >
     <!-- 顶部工具栏 -->
