@@ -13,6 +13,10 @@ const bookRoutes: RouteRecordRaw[] = [
   {
     path: 'book/libClass',
     component: () => import('@/pages/FileManage/BookLibClass.vue'),
+  },
+  {
+    path: 'book/publisher',
+    component: () => import('@/pages/FileManage/BookPublisher.vue'),
   }
 ]
 
