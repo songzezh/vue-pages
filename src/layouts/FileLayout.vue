@@ -32,22 +32,22 @@ const modules = ref<Module[]>([
         to: '/file/book',
       },
       {
-        name: 'press_list',
+        name: 'publisher_list',
         label: '出版社',
         icon: 'source',
-        to: '/file/press',
+        to: '/file/book/publisher',
       },
       {
-        name: 'press_series_list',
+        name: 'publisher_series_list',
         label: '丛书信息',
         icon: 'collections_bookmark',
-        to: '/file/press/series',
+        to: '/file/book/publisher/series',
       },
       {
         name: 'reading_list',
         label: '书单管理',
         icon: 'list',
-        to: '/file/reading',
+        to: '/file/book/reading',
       },
       {
         name: 'clc_code',
