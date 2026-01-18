@@ -17,6 +17,13 @@ const bookRoutes: RouteRecordRaw[] = [
   {
     path: 'book/publisher',
     component: () => import('@/pages/FileManage/BookPublisher.vue'),
+  },
+  {
+    path: 'book/publisher/series',
+    component: () => import('@/pages/FileManage/BookPublisherSeries.vue'),
+    meta: {
+      title: "丛书信息"
+    }
   }
 ]
 
