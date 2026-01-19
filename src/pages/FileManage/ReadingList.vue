@@ -721,7 +721,7 @@ const editReadingList = (readingList: ReadingList) => {
  */
 const viewReadingList = (readingList: ReadingList) => {
   // 在实际应用中，这里应该导航到书单详情页面
-  // router.push(`/url/${readingList.id}`);
+  router.push(`/file/book/reading/detail/${readingList.id}`);
 
   // 先使用对话框模拟详情按钮
   $q.dialog({

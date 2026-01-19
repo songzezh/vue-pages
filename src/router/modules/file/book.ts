@@ -33,6 +33,13 @@ const bookRoutes: RouteRecordRaw[] = [
     }
   },
   {
+    path: 'book/reading/detail/:id',
+    component: () => import('@/pages/FileManage/ReadingListDetail.vue'),
+    meta: {
+      title: "书单详情"
+    }
+  },
+  {
     path: 'book/subject',
     component: () => import('@/pages/FileManage/BookSubject.vue'),
     meta: {
