@@ -63,9 +63,9 @@ const modules = ref<Module[]>([
       },
       {
         name: 'author_list',
-        label: '图书作者',
+        label: '书籍创作者',
         icon: 'people',
-        to: '/file/book/contributors'
+        to: '/file/book/contributor'
       }
     ]
   },

@@ -45,6 +45,13 @@ const bookRoutes: RouteRecordRaw[] = [
     meta: {
       title: '学科信息'
     }
+  },
+  {
+    path: 'book/contributor',
+    component: () => import('@/pages/FileManage/BookContributorList.vue'),
+    meta: {
+      title: '书籍创作者'
+    }
   }
 ]
 
