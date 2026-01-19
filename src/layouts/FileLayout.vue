@@ -121,7 +121,7 @@ const modules = ref<Module[]>([
         name: 'file_list',
         label: '文件列表',
         icon: 'list',
-        to: '/file/metadata'
+        to: '/file/meta/list'
       },
       {
         name: 'file_format',
