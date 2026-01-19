@@ -24,6 +24,13 @@ const bookRoutes: RouteRecordRaw[] = [
     meta: {
       title: "丛书信息"
     }
+  },
+  {
+    path: 'book/subject',
+    component: () => import('@/pages/FileManage/BookSubject.vue'),
+    meta: {
+      title: '学科信息'
+    }
   }
 ]
 

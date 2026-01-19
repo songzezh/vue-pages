@@ -57,7 +57,7 @@ const modules = ref<Module[]>([
       },
       {
         name: 'subject',
-        label: '图书类别',
+        label: '学科管理',
         icon: 'category',
         to: '/file/book/subject'
       },
