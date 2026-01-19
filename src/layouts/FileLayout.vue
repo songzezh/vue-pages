@@ -127,7 +127,7 @@ const modules = ref<Module[]>([
         name: 'file_format',
         label: '文件格式',
         icon: 'format_align_justify',
-        to: '/file/metadata/format'
+        to: '/file/meta/formats'
       }
     ]
   },

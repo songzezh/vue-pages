@@ -7,6 +7,13 @@ const metaRoutes: RouteRecordRaw[] = [
     meta: {
       title: '文件元数据'
     }
+  },
+  {
+    path: 'meta/formats',
+    component: () => import('@/pages/FileManage/FileFormatList.vue'),
+    meta: {
+      title: '文件格式'
+    }
   }
 ]
 
