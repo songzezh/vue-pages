@@ -2,6 +2,13 @@ import {type RouteRecordRaw} from "vue-router";
 
 const musicRoutes: RouteRecordRaw[] = [
   {
+    path: 'music',
+    component: () => import('@/pages/FileManage/MusicList.vue'),
+    meta: {
+      title: 'Music Search'
+    }
+  },
+  {
     path: 'music/albums',
     component: () => import('@/pages/FileManage/MusicAlbumList.vue'),
     meta: {
