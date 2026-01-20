@@ -108,7 +108,7 @@ const modules = ref<Module[]>([
         name: 'player_list',
         label: '艺术家',
         icon: 'broadcast_on_personal',
-        to: '/file/music/player'
+        to: '/file/music/contributor'
       },
       {
         name: 'genre_list',

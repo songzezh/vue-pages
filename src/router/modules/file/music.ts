@@ -23,6 +23,13 @@ const musicRoutes: RouteRecordRaw[] = [
     }
   },
   {
+    path: 'music/contributor',
+    component: () => import('@/pages/FileManage/MusicContributorList.vue'),
+    meta: {
+      title: 'Music Contributor'
+    }
+  },
+  {
     path: 'music/genres',
     component: () => import('@/pages/FileManage/MusicGenreList.vue'),
     meta: {
