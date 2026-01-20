@@ -109,6 +109,12 @@ const modules = ref<Module[]>([
         label: '艺术家',
         icon: 'broadcast_on_personal',
         to: '/file/music/player'
+      },
+      {
+        name: 'genre_list',
+        label: '流派',
+        icon: 'category',
+        to: '/file/music/genres'
       }
     ]
   },
