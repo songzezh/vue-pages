@@ -16,6 +16,13 @@ const musicRoutes: RouteRecordRaw[] = [
     }
   },
   {
+    path: 'music/playlist',
+    component: () => import('@/pages/FileManage/MusicPlaylist.vue'),
+    meta: {
+      title: 'Music Playlist'
+    }
+  },
+  {
     path: 'music/genres',
     component: () => import('@/pages/FileManage/MusicGenreList.vue'),
     meta: {
