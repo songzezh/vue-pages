@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import bookRoutes from './file/book'
 import metaRoutes from './file/meta'
+import musicRoutes from "@/router/modules/file/music.ts";
 
 const fileRoutes: RouteRecordRaw = {
   path: '/file',
@@ -23,7 +24,8 @@ const fileRoutes: RouteRecordRaw = {
       }
     },
     ...bookRoutes,
-    ...metaRoutes
+    ...metaRoutes,
+    ...musicRoutes
   ]
 }
 

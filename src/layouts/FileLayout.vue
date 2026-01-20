@@ -96,7 +96,7 @@ const modules = ref<Module[]>([
         name: 'album_list',
         label: '音乐专辑',
         icon: 'album',
-        to: '/file/music/album'
+        to: '/file/music/albums'
       },
       {
         name: 'playlist',
